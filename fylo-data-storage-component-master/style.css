@@ -1,0 +1,347 @@
+:root {
+/*### Primary*/
+    --Gradient: rgb(255, 163, 153) to hsl(335, 100%, 65%);
+
+/*### Neutral*/
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Graysh-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+*   {
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+    }  
+    .container { 
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .block-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 3rem;
+        width: 15rem;
+        height: 7.5rem;
+        background-color: var(--Dark-Blue);
+        border-radius: 0.5rem;
+        border-top-right-radius: 5rem;
+    }
+    .logo {
+        display: flex;
+        align-items: start;
+        margin-bottom: 3rem;
+    }
+    .icons {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        justify-content: start;
+        align-items: center;
+    }
+    .bg-document {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Very-Dark-Blue);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .bg-folder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Very-Dark-Blue);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        height: 1.5rem;
+    }
+    .bg-upload {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Very-Dark-Blue);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        height: 1.5rem;
+    }
+    .block-two {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Dark-Blue);
+        padding: 2rem;
+        border-radius: 0.5rem;
+    }
+    .title-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--Pale-Blue);
+        font-size: 0.9rem;
+    }
+    .bar {
+        width: 15.75rem;
+        padding: 0.1rem;
+        border: 1px solid var(--Very-Dark-Blue);
+        background: var(--Very-Dark-Blue);
+        border-radius: 1rem; 
+    }
+    .progress {
+        background: linear-gradient(to right, rgb(255, 163, 153), hsl(335, 100%, 65%));
+        border-radius: 1rem;
+        padding: 0.1rem;
+        position: relative;
+        animation-name: progress-animation;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes progress-animation {
+        0% { width: 1rem;}
+        100% {width: 215px;}
+    }
+    .ball {
+        width: 0rem;
+        bottom: 0.01rem;
+        background-color: var(--Pale-Blue);
+        border: 1px solid var(--Pale-Blue);
+        border-radius: 100%;
+        padding: 0.3rem;
+        position: relative;
+        animation-name: ball-right;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes ball-right {
+        0% {background-color: var(--Pale-Blue);left: 0px;}
+        100% {background-color: var(--Pale-Blue);left: 200px;}
+    }
+    .value {
+        display: flex;
+        flex-direction: row;
+        gap: 185px;
+    }
+    .value-zero {
+        color: var(--Pale-Blue);
+        font-size: 0.8rem;
+    }
+    .value-one {
+        color: var(--Pale-Blue);
+        font-size: 0.8rem;
+    }
+    .ballon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0.8rem;
+        gap: 6px;
+        background-color: white;
+        border-radius: 0.5rem;
+        width: 150px;
+        height: 50px;
+        margin: 0;
+        position: absolute;
+        left: 25%;
+        top: 72.5%;
+    }
+    .ballon-title {
+        margin: 0;
+        font-size: 3rem;
+    }
+    .ballon-text {
+        margin: 0;
+        font-size: 1rem;
+        color: var(--Graysh-Blue);
+    }
+    .attribution {
+        position: absolute;
+        top: 100%;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+        background-color: var(--Very-Dark-Blue);
+        background-image: url(images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        min-height: 100vh;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+    .block-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 3rem;
+        width: 15rem;
+        height: 7.5rem;
+        background-color: var(--Dark-Blue);
+        border-radius: 0.5rem;
+        border-top-right-radius: 5rem;
+    }
+    .logo {
+        display: flex;
+        align-items: start;
+        margin-bottom: 3rem;
+    }
+    .icons {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        justify-content: start;
+        align-items: center;
+    }
+    .bg-document {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Very-Dark-Blue);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .bg-folder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Very-Dark-Blue);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        height: 1.5rem;
+    }
+    .bg-upload {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Very-Dark-Blue);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        height: 1.5rem;
+    }
+    .block-two {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        background-color: var(--Dark-Blue);
+        padding: 2rem;
+        width: 31.5rem;
+        height: 6.3rem;
+        border-radius: 0.5rem;
+        position: relative;
+        top: 50px;
+    }
+    .title-header {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        color: var(--Pale-Blue);
+        font-size: 0.9rem;
+    }
+    .bar {
+        width:31.5rem;
+        padding: 0.1rem;
+        border: 1px solid var(--Very-Dark-Blue);
+        background: var(--Very-Dark-Blue);
+        border-radius: 1rem; 
+    }
+    .progress {
+        background: linear-gradient(to right, rgb(255, 163, 153), hsl(335, 100%, 65%));
+        border-radius: 1rem;
+        padding: 0.1rem;
+        position: relative;
+        animation-name: progress-animation;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes progress-animation {
+        0% { width: 1rem;}
+        100% {width: 26rem;}
+    }
+    .ball {
+        width: 0rem;
+        bottom: 0.01rem;
+        background-color: var(--Pale-Blue);
+        border: 1px solid var(--Pale-Blue);
+        border-radius: 100%;
+        padding: 0.3rem;
+        position: relative;
+        animation-name: ball-right;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes ball-right {
+        0% {background-color: var(--Pale-Blue);left: 0px;}
+        100% {background-color: var(--Pale-Blue);left: 25rem;}
+    }
+    .value {
+        display: flex;
+        flex-direction: row;
+        gap: 26.5rem;
+    }
+    .value-zero {
+        color: var(--Pale-Blue);
+        font-size: 0.8rem;
+    }
+    .value-one {
+        color: var(--Pale-Blue);
+        font-size: 0.8rem;
+    }
+    .ballon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0.8rem;
+        gap: 6px;
+        background-color: white;
+        border-radius: 0.5rem;
+        width: 150px;
+        height: 50px;
+        margin: 0;
+        position: absolute;
+        left: 67%;
+    }
+    .ballon-title {
+        margin: 0;
+        font-size: 3rem;
+    }
+    .ballon-text {
+        margin: 0;
+        font-size: 1rem;
+        color: var(--Graysh-Blue);
+    }
+    .attribution {
+        position: absolute;
+        top: 100%;
+    }
+}
